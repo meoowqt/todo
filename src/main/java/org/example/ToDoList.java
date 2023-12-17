@@ -27,7 +27,7 @@ public class ToDoList {
         return todoList.size();
     }
 
-    public Task get(int index) {
+    public Task getTask(int index) {
         return todoList.get(index);
     }
 }
