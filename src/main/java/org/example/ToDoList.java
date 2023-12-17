@@ -1,11 +1,9 @@
 package org.example;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.List;
 
 public class ToDoList {
-    private ArrayList<Task> todoList;
+    private ArrayList<Task> todoList = new ArrayList<Task>();
 
     public void add(Task todo) {
         todoList.add(todo);
@@ -19,8 +17,10 @@ public class ToDoList {
         todoList.remove(index);
     }
 
-    public ArrayList<Task> getTodos() {
-        return todoList;
+    public void getTodo() {
+        for (int i = 0; i < todoList.size(); i++) {
+            System.out.println((i + 1) + ". " + todoList.get(i).getData() + " " + todoList.get(i).getName() + " " + todoList.get(i).getDescription());
+        }
     }
 
     public int size() {
