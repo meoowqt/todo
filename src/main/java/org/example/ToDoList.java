@@ -5,13 +5,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ToDoList {
-    private ArrayList<String> todoList;
+    private ArrayList<Task> todoList;
 
-    public void add(String todo) {
+    public void add(Task todo) {
         todoList.add(todo);
     }
 
-    public void edit(String todo, int index) {
+    public void edit(Task todo, int index) {
         todoList.set(index, todo);
     }
 
@@ -19,7 +19,7 @@ public class ToDoList {
         todoList.remove(index);
     }
 
-    public ArrayList<String> getTodos() {
+    public ArrayList<Task> getTodos() {
         return todoList;
     }
 
@@ -27,7 +27,7 @@ public class ToDoList {
         return todoList.size();
     }
 
-    public String get(int index) {
+    public Task get(int index) {
         return todoList.get(index);
     }
 }

@@ -1,6 +1,7 @@
 package org.example;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -22,6 +23,14 @@ public class Main {
             String command = scan.nextLine();
             if (command.equals("LIST")) {
             } else if (command.equals("ADD")) {
+                System.out.println("Введите дату задачи:");
+                String data = scan.next();
+                System.out.println("Введите название задачи");
+                String name = scan.next();
+                System.out.println("Введите описание задачи");
+                String description = scan.next();
+                Task task = new Task(data, name, description);
+                todo.add(task);
             } else if (command.equals("DELETE")) {
             } else if (command.equals("EDIT")) {
             } else if (command.equals("EXIT")) {
